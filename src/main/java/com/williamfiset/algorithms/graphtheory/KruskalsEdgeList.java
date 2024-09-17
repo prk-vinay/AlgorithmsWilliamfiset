@@ -47,9 +47,11 @@ public class KruskalsEdgeList {
       if (sz[root1] < sz[root2]) {
         sz[root2] += sz[root1];
         id[root1] = root2;
+        sz[root1] = 0
       } else {
         sz[root1] += sz[root2];
         id[root2] = root1;
+        sz[root2] = 0
       }
     }
   }
